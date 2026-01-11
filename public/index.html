@@ -8,7 +8,7 @@
 </head>
 <body class="index-page">
     <header class="header">
-        <div class="container">
+        <div class="container header-container">
             <nav class="nav" id="nav" aria-label="Основная навигация">
                 <h1 class="nav-logo">Финансы</h1>
                 <div class="nav-center">
@@ -26,78 +26,187 @@
     </header>
 
     <main class="main">
-        <div class="container">
-            <!-- Главная секция -->
-            <section class="hero-section" id="home">
-                <div class="hero-content">
-                    <h2>Добро пожаловать!</h2>
-                    <p class="hero-description">Современная система для учёта и анализа личных финансов. Контролируйте свои деньги легко и эффективно.</p>
+        <!-- Секция 1: Hero с Dashboard -->
+        <section class="scroll-section hero-scroll-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-wrapper">
+                    <div class="hero-content-wrapper">
+                        <h2 class="hero-title">Контролируйте <span class="hero-accent">свои финансы</span></h2>
+                        <p class="hero-description">Удобная система для учёта и анализа личных финансов. Отслеживайте доходы, расходы и планируйте бюджет.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-hero">Начать →</button>
+                            <button class="btn btn-secondary btn-hero">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="dashboard-summary">
+                        <div class="summary-card balance-card">
+                            <div class="summary-header">
+                                <h3>Общий баланс</h3>
+                                <div class="summary-icons">
+                                    <div class="avatar">AЕ</div>
+                                </div>
+                            </div>
+                            <div class="balance-amount">BR 5400</div>
+                        </div>
+                        <div class="summary-cards-row">
+                            <div class="summary-card income-card">
+                                <h3>Доходы</h3>
+                                <div class="income-amount">+BR 2500</div>
+                            </div>
+                            <div class="summary-card expenses-card">
+                                <h3>Расходы</h3>
+                                <div class="expenses-amount">-BR 1850</div>
+                            </div>
+                        </div>
+                        <div class="summary-card operations-card">
+                            <div class="operations-header">
+                                <h3>Последние операции</h3>
+                                <a href="#" class="operations-link">Все →</a>
+                            </div>
+                            <div class="operations-list">
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Продукты</div>
+                                        <div class="operation-category">Еда</div>
+                                    </div>
+                                    <div class="operation-amount negative">-4 250 BR</div>
+                                </div>
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-income">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Зарплата</div>
+                                        <div class="operation-category">Доход</div>
+                                    </div>
+                                    <div class="operation-amount positive">+125 000 BR</div>
+                                </div>
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-subscription">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Netflix</div>
+                                        <div class="operation-category">Подписки</div>
+                                    </div>
+                                    <div class="operation-amount negative">-890 BR</div>
+                                </div>
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-cafe">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                            <line x1="6" y1="1" x2="6" y2="8"></line>
+                                            <line x1="10" y1="1" x2="10" y2="8"></line>
+                                            <line x1="14" y1="1" x2="14" y2="8"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Кафе</div>
+                                        <div class="operation-category">Еда</div>
+                                    </div>
+                                    <div class="operation-amount negative">-890 BR</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="features">
-                    <article class="feature-card">
-                        <h3>Отслеживание расходов</h3>
-                        <p>Ведите детальный учёт всех ваших доходов и расходов. Анализируйте свои финансовые привычки и оптимизируйте бюджет.</p>
-                    </article>
-                    <article class="feature-card">
-                        <h3>Категории</h3>
-                        <p>Организуйте операции по категориям для удобного анализа. Создавайте собственные категории и отслеживайте траты по ним.</p>
-                    </article>
-                    <article class="feature-card">
-                        <h3>Счета</h3>
-                        <p>Управляйте несколькими финансовыми счетами одновременно. Кошельки, банковские карты, накопительные счета — всё в одном месте.</p>
-                    </article>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Секция о возможностях -->
-            <section class="info-section" id="features" aria-labelledby="features-heading">
-                <header class="section-header">
-                    <h2 id="features-heading">Возможности системы</h2>
-                    <p>Всё необходимое для полного контроля ваших финансов</p>
-                </header>
-                <div class="info-grid">
-                    <article class="info-card">
-                        <div class="info-icon" aria-hidden="true">📊</div>
-                        <h3>Детальная аналитика</h3>
-                        <p>Получайте подробные отчёты о ваших доходах и расходах. Визуализируйте данные за любой период времени.</p>
+        <!-- Секция 2: Features и All in One -->
+        <section class="scroll-section features-scroll-section" id="features">
+            <div class="container">
+                <div class="features">
+                    <article class="feature-card feature-card-green">
+                        <div class="feature-icon feature-icon-green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Отслеживание расходов</h3>
+                        <p>Ведите детальный учёт всех доходов и расходов с умными категориями</p>
+                        <a href="#" class="feature-link">Подробнее →</a>
                     </article>
-                    <article class="info-card">
-                        <div class="info-icon" aria-hidden="true">🔒</div>
-                        <h3>Безопасность данных</h3>
-                        <p>Ваши финансовые данные надёжно защищены. Используем современные методы шифрования и безопасное хранение.</p>
+                    <article class="feature-card">
+                        <div class="feature-icon feature-icon-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Категории</h3>
+                        <p>Организуйте операции по настраиваемым категориям для глубокого анализа</p>
                     </article>
-                    <article class="info-card">
-                        <div class="info-icon" aria-hidden="true">💳</div>
-                        <h3>Множество валют</h3>
-                        <p>Работайте с разными валютами. Поддерживаются основные мировые валюты: USD, EUR, RUB, BYN и другие.</p>
-                    </article>
-                    <article class="info-card">
-                        <div class="info-icon" aria-hidden="true">📱</div>
-                        <h3>Адаптивный дизайн</h3>
-                        <p>Используйте приложение на любом устройстве. Удобный интерфейс на компьютере, планшете и телефоне.</p>
-                    </article>
-                    <article class="info-card">
-                        <div class="info-icon" aria-hidden="true">⚡</div>
-                        <h3>Быстрая работа</h3>
-                        <p>Оптимизированная архитектура обеспечивает мгновенную загрузку данных и плавную работу интерфейса.</p>
-                    </article>
-                    <article class="info-card">
-                        <div class="info-icon" aria-hidden="true">🎯</div>
-                        <h3>Целевое планирование</h3>
-                        <p>Ставьте финансовые цели и отслеживайте прогресс. Планируйте крупные покупки и накопления.</p>
+                    <article class="feature-card">
+                        <div class="feature-icon feature-icon-purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3>Управление счетами</h3>
+                        <p>Контролируйте несколько финансовых счетов в одном месте</p>
                     </article>
                 </div>
-            </section>
-        </div>
+                <div class="all-in-one-card" id="all-in-one">
+                    <div class="all-in-one-content">
+                        <h2>Всё в одном месте</h2>
+                        <p>Доходы, расходы, счета и категории — управляйте финансами легко и наглядно</p>
+                        <div class="feature-tags">
+                            <span class="tag tag-green">
+                                <span class="tag-dot tag-dot-green"></span>
+                                Категории расходов
+                            </span>
+                            <span class="tag tag-blue">
+                                <span class="tag-dot tag-dot-blue"></span>
+                                Несколько счетов
+                            </span>
+                            <span class="tag tag-purple">
+                                <span class="tag-dot tag-dot-purple"></span>
+                                История операций
+                            </span>
+                        </div>
+                    </div>
+                    <div class="all-in-one-chart">
+                        <div class="chart-header">Январь 2026</div>
+                        <div class="chart-bars">
+                            <div class="chart-bar chart-bar-green" style="width: 85%"></div>
+                            <div class="chart-bar chart-bar-blue" style="width: 60%"></div>
+                            <div class="chart-bar chart-bar-purple" style="width: 45%"></div>
+                            <div class="chart-bar chart-bar-orange" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-container">
             <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Финансы</span>
+                </div>
                 <p>&copy; 2026 Учёт личных финансов. Все права защищены.</p>
-                <nav class="footer-links" aria-label="Навигация в футере">
-                    <a href="/dashboard.html" id="footerDashboardLink" style="display: none;">Панель управления</a>
-                </nav>
             </div>
         </div>
     </footer>
