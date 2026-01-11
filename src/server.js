@@ -11,6 +11,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Раздача статических файлов (фронтенд)
+app.use(express.static('public'));
+
 // Простой health-check эндпоинт
 app.get('/api/health', (req, res) => {
   res.json({
@@ -19,10 +22,15 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// TODO: здесь позже подключим модули:
-// app.use('/api/auth', authRoutes);
+// Подключение модулей
+const authRoutes = require('./modules/auth/routes');
+app.use('/api/auth', authRoutes);
+
+// TODO: здесь позже подключим остальные модули:
 // app.use('/api/users', usersRoutes);
-// и т.д.
+// app.use('/api/accounts', accountsRoutes);
+// app.use('/api/categories', categoriesRoutes);
+// app.use('/api/transactions', transactionsRoutes);
 
 // Middleware обработки ошибок – в самом конце цепочки
 app.use(errorHandler);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления - Учёт личных финансов</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Учёт личных финансов</h1>
+            <nav class="nav">
+                <div class="nav-left">
+                    
+                </div>
+                <div class="nav-right">
+                    <span class="user-info" id="userInfo"></span>
+                    <button class="btn btn-secondary" id="logoutBtn">Выйти</button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h2>Панель управления</h2>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Счета</h3>
+                            <p class="stat-value" id="accountsCount">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Категории</h3>
+                            <p class="stat-value" id="categoriesCount">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Транзакции</h3>
+                            <p class="stat-value" id="transactionsCount">0</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Счета</h3>
+                        <button class="btn btn-primary" id="addAccountBtn">+ Добавить счёт</button>
+                        <div id="accountsList" class="list"></div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Последние транзакции</h3>
+                        <div id="transactionsList" class="list"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Учёт личных финансов. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="/">Главная</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
+

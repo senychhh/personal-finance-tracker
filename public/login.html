@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Учёт личных финансов</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Вход в систему</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </form>
+                <div class="auth-footer">
+                    <p>Нет аккаунта? <a href="/register.html">Зарегистрироваться</a></p>
+                </div>
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Учёт личных финансов. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="/">Главная</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+</html>
+

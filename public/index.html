@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финансы</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="index-page">
+    <header class="header">
+        <div class="container">
+            <nav class="nav" id="nav" aria-label="Основная навигация">
+                <h1 class="nav-logo">Финансы</h1>
+                <div class="nav-center">
+                    <a href="/" class="nav-link">Главная</a>
+                    <a href="#features" class="nav-link">Возможности</a>
+                    <a href="/dashboard.html" class="nav-link" id="dashboardLink" style="display: none;">Панель управления</a>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-link" id="loginBtn">Вход</button>
+                    <button class="nav-link" id="registerBtn">Регистрация</button>
+                    <button class="btn btn-secondary" id="logoutBtn" style="display: none;">Выйти</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Главная секция -->
+            <section class="hero-section" id="home">
+                <div class="hero-content">
+                    <h2>Добро пожаловать!</h2>
+                    <p class="hero-description">Современная система для учёта и анализа личных финансов. Контролируйте свои деньги легко и эффективно.</p>
+                </div>
+                <div class="features">
+                    <article class="feature-card">
+                        <h3>Отслеживание расходов</h3>
+                        <p>Ведите детальный учёт всех ваших доходов и расходов. Анализируйте свои финансовые привычки и оптимизируйте бюджет.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Категории</h3>
+                        <p>Организуйте операции по категориям для удобного анализа. Создавайте собственные категории и отслеживайте траты по ним.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Счета</h3>
+                        <p>Управляйте несколькими финансовыми счетами одновременно. Кошельки, банковские карты, накопительные счета — всё в одном месте.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Секция о возможностях -->
+            <section class="info-section" id="features" aria-labelledby="features-heading">
+                <header class="section-header">
+                    <h2 id="features-heading">Возможности системы</h2>
+                    <p>Всё необходимое для полного контроля ваших финансов</p>
+                </header>
+                <div class="info-grid">
+                    <article class="info-card">
+                        <div class="info-icon" aria-hidden="true">📊</div>
+                        <h3>Детальная аналитика</h3>
+                        <p>Получайте подробные отчёты о ваших доходах и расходах. Визуализируйте данные за любой период времени.</p>
+                    </article>
+                    <article class="info-card">
+                        <div class="info-icon" aria-hidden="true">🔒</div>
+                        <h3>Безопасность данных</h3>
+                        <p>Ваши финансовые данные надёжно защищены. Используем современные методы шифрования и безопасное хранение.</p>
+                    </article>
+                    <article class="info-card">
+                        <div class="info-icon" aria-hidden="true">💳</div>
+                        <h3>Множество валют</h3>
+                        <p>Работайте с разными валютами. Поддерживаются основные мировые валюты: USD, EUR, RUB, BYN и другие.</p>
+                    </article>
+                    <article class="info-card">
+                        <div class="info-icon" aria-hidden="true">📱</div>
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Используйте приложение на любом устройстве. Удобный интерфейс на компьютере, планшете и телефоне.</p>
+                    </article>
+                    <article class="info-card">
+                        <div class="info-icon" aria-hidden="true">⚡</div>
+                        <h3>Быстрая работа</h3>
+                        <p>Оптимизированная архитектура обеспечивает мгновенную загрузку данных и плавную работу интерфейса.</p>
+                    </article>
+                    <article class="info-card">
+                        <div class="info-icon" aria-hidden="true">🎯</div>
+                        <h3>Целевое планирование</h3>
+                        <p>Ставьте финансовые цели и отслеживайте прогресс. Планируйте крупные покупки и накопления.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Учёт личных финансов. Все права защищены.</p>
+                <nav class="footer-links" aria-label="Навигация в футере">
+                    <a href="/dashboard.html" id="footerDashboardLink" style="display: none;">Панель управления</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup для входа и регистрации -->
+    <div id="authModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Закрыть модальное окно">&times;</button>
+            
+            <div class="modal-tabs" role="tablist">
+                <button class="modal-tab active" data-tab="login" role="tab" aria-selected="true" aria-controls="loginTab">Вход</button>
+                <button class="modal-tab" data-tab="register" role="tab" aria-selected="false" aria-controls="registerTab">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <div id="loginTab" class="modal-tab-content active" role="tabpanel" aria-labelledby="login-tab">
+                <h2 id="modal-title">Вход в систему</h2>
+                <form id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="modalEmail">Email</label>
+                        <input type="email" id="modalEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalPassword">Пароль</label>
+                        <input type="password" id="modalPassword" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </form>
+                <div id="loginErrorMessage" class="error-message" hidden role="alert"></div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="registerTab" class="modal-tab-content" role="tabpanel" aria-labelledby="register-tab">
+                <h2>Регистрация</h2>
+                <form id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label for="modalRegEmail">Email</label>
+                        <input type="email" id="modalRegEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalRegPassword">Пароль</label>
+                        <input type="password" id="modalRegPassword" name="password" minlength="6" required autocomplete="new-password">
+                        <small>Минимум 6 символов</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalFirstName">Имя</label>
+                        <input type="text" id="modalFirstName" name="firstName" autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalLastName">Фамилия</label>
+                        <input type="text" id="modalLastName" name="lastName" autocomplete="family-name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                </form>
+                <div id="registerErrorMessage" class="error-message" hidden role="alert"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
