@@ -1,0 +1,87 @@
+/* CSS переменные для темной темы */
+:root {
+    /* Цвета */
+    --primary-color: #10b981;
+    --primary-hover: #059669;
+    --secondary-color: #6b7280;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    
+    /* Темная тема */
+    --bg-dark: #0a0a0a;
+    --bg-darker: #050505;
+    --bg-card: #141414;
+    --bg-card-hover: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --text-light: #71717a;
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    /* Акцентные цвета */
+    --green: #10b981;
+    --green-dark: #059669;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --orange: #f59e0b;
+    
+    /* Тени */
+    --shadow-sm: none;
+    --shadow: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+    
+    /* Отступы */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Переходы */
+    --transition-fast: 0.2s;
+    --transition-base: 0.3s;
+    --transition-slow: 0.5s;
+}
+
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Базовые стили */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    position: relative;
+}
+
+/* Скрытие scrollbar для WebKit браузеров */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+

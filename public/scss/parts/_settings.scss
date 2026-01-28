@@ -1,0 +1,16 @@
+// Sass settings (breakpoints, mixins)
+@use "sass:map";
+
+$breakpoints: (
+  lg: 1024px,
+  md: 768px
+);
+
+@mixin respond($size) {
+  $value: map.get($breakpoints, $size);
+  @if $value {
+    @media (max-width: $value) {
+      @content; 
+    }
+  }
+}

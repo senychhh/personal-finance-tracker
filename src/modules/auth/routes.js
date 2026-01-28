@@ -1,10 +1,21 @@
 /**
  * Маршруты для аутентификации
- * TODO: Реализовать маршруты для регистрации и авторизации
  */
 
-module.exports = (router) => {
-  // TODO: POST /auth/register - регистрация
-  // TODO: POST /auth/login - авторизация
-};
+const express = require('express');
+const authController = require('./controller');
+const authMiddleware = require('../../middleware/auth');
+
+const router = express.Router();
+
+// Регистрация (публичный доступ)
+router.post('/register', authController.register);
+
+// Авторизация (публичный доступ)
+router.post('/login', authController.login);
+
+// Получение информации о текущем пользователе (требует аутентификации)
+router.get('/me', authMiddleware, authController.getMe);
+
+module.exports = router;
 

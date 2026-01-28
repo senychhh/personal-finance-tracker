@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финансы</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="index-page">
+    <header class="header">
+        <div class="container header-container">
+            <nav class="nav" id="nav" aria-label="Основная навигация">
+                <h1 class="nav-logo">Финансы</h1>
+                <div class="nav-center">
+                    <a href="/" class="nav-link">Главная</a>
+                    <a href="#features" class="nav-link">Возможности</a>
+                    <a href="/dashboard.html" class="nav-link" id="dashboardLink" style="display: none;">Личный кабинет</a>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-link" id="loginBtn">Вход</button>
+                    <button class="nav-link" id="registerBtn">Регистрация</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Секция 1: Hero с Dashboard -->
+        <section class="scroll-section hero-scroll-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-wrapper">
+                    <div class="hero-content-wrapper">
+                        <h2 class="hero-title">Контролируйте <span class="hero-accent">свои финансы</span></h2>
+                        <p class="hero-description">Удобная система для учёта и анализа личных финансов. Отслеживайте доходы, расходы и планируйте бюджет.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-hero">Начать →</button>
+                            <button class="btn btn-secondary btn-hero">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="dashboard-summary">
+                        <div class="summary-card balance-card">
+                            <div class="summary-header">
+                                <h3>Общий баланс</h3>
+                                
+                            </div>
+                            <div class="balance-amount">BR 5400</div>
+                        </div>
+                        <div class="summary-cards-row">
+                            <div class="summary-card income-card">
+                                <h3>Доходы</h3>
+                                <div class="income-amount">+BR 2500</div>
+                            </div>
+                            <div class="summary-card expenses-card">
+                                <h3>Расходы</h3>
+                                <div class="expenses-amount">-BR 1850</div>
+                            </div>
+                        </div>
+                        <div class="summary-card operations-card">
+                            <div class="operations-header">
+                                <h3>Последние операции</h3>
+                                <a href="#" class="operations-link">Все →</a>
+                            </div>
+                            <div class="operations-list">
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Продукты</div>
+                                        <div class="operation-category">Еда</div>
+                                    </div>
+                                    <div class="operation-amount negative">-4 250 BR</div>
+                                </div>
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-income">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Зарплата</div>
+                                        <div class="operation-category">Доход</div>
+                                    </div>
+                                    <div class="operation-amount positive">+125 000 BR</div>
+                                </div>
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-subscription">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Netflix</div>
+                                        <div class="operation-category">Подписки</div>
+                                    </div>
+                                    <div class="operation-amount negative">-890 BR</div>
+                                </div>
+                                <div class="operation-item">
+                                    <div class="operation-icon operation-icon-cafe">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                            <line x1="6" y1="1" x2="6" y2="8"></line>
+                                            <line x1="10" y1="1" x2="10" y2="8"></line>
+                                            <line x1="14" y1="1" x2="14" y2="8"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="operation-info">
+                                        <div class="operation-name">Кафе</div>
+                                        <div class="operation-category">Еда</div>
+                                    </div>
+                                    <div class="operation-amount negative">-890 BR</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 2: Features и All in One -->
+        <section class="scroll-section features-scroll-section" id="features">
+            <div class="container">
+                <div class="features">
+                    <article class="feature-card feature-card-green">
+                        <div class="feature-icon feature-icon-green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Отслеживание расходов</h3>
+                        <p>Ведите детальный учёт всех доходов и расходов с умными категориями</p>
+                    
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon feature-icon-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Категории</h3>
+                        <p>Организуйте операции по настраиваемым категориям для глубокого анализа</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon feature-icon-purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3>Управление счетами</h3>
+                        <p>Контролируйте несколько финансовых счетов в одном месте</p>
+                    </article>
+                </div>
+                <div class="all-in-one-card" id="all-in-one">
+                    <div class="all-in-one-content">
+                        <h2>Всё в одном месте</h2>
+                        <p>Доходы, расходы, счета и категории — управляйте финансами легко и наглядно</p>
+                        <div class="feature-tags">
+                            <span class="tag tag-green">
+                                <span class="tag-dot tag-dot-green"></span>
+                                Категории расходов
+                            </span>
+                            <span class="tag tag-blue">
+                                <span class="tag-dot tag-dot-blue"></span>
+                                Несколько счетов
+                            </span>
+                            <span class="tag tag-purple">
+                                <span class="tag-dot tag-dot-purple"></span>
+                                История операций
+                            </span>
+                        </div>
+                    </div>
+                    <div class="all-in-one-chart">
+                        <div class="chart-header">Январь 2026</div>
+                        <div class="chart-bars">
+                            <div class="chart-bar chart-bar-green" style="width: 85%"></div>
+                            <div class="chart-bar chart-bar-blue" style="width: 60%"></div>
+                            <div class="chart-bar chart-bar-purple" style="width: 45%"></div>
+                            <div class="chart-bar chart-bar-orange" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Финансы</span>
+                </div>
+                <p>&copy; 2026 Учёт личных финансов. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup для входа и регистрации -->
+    <div id="authModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Закрыть модальное окно">&times;</button>
+            
+            <div class="modal-tabs" role="tablist">
+                <button class="modal-tab active" data-tab="login" role="tab" aria-selected="true" aria-controls="loginTab">Вход</button>
+                <button class="modal-tab" data-tab="register" role="tab" aria-selected="false" aria-controls="registerTab">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <div id="loginTab" class="modal-tab-content active" role="tabpanel" aria-labelledby="login-tab">
+                <h2 id="modal-title">Вход в систему</h2>
+                <form id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="modalEmail">Email</label>
+                        <input type="email" id="modalEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalPassword">Пароль</label>
+                        <input type="password" id="modalPassword" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </form>
+                <div id="loginErrorMessage" class="error-message" hidden role="alert"></div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="registerTab" class="modal-tab-content" role="tabpanel" aria-labelledby="register-tab">
+                <h2>Регистрация</h2>
+                <form id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label for="modalRegEmail">Email</label>
+                        <input type="email" id="modalRegEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalRegPassword">Пароль</label>
+                        <input type="password" id="modalRegPassword" name="password" minlength="6" required autocomplete="new-password">
+                        <small>Минимум 6 символов</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalFirstName">Имя</label>
+                        <input type="text" id="modalFirstName" name="firstName" autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalLastName">Фамилия</label>
+                        <input type="text" id="modalLastName" name="lastName" autocomplete="family-name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                </form>
+                <div id="registerErrorMessage" class="error-message" hidden role="alert"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

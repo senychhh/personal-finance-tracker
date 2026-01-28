@@ -1,0 +1,270 @@
+/* ============================================
+   FEATURES SECTION
+   ============================================ */
+.features-scroll-section {
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: var(--spacing-xl);
+}
+
+.features-scroll-section .container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.feature-card {
+    background: var(--bg-card);
+    padding: var(--spacing-xl);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    /* без верхней цветной полоски (::before) */
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Первая карточка — по умолчанию как обычная,
+   зелёный акцент только на hover */
+.feature-card-green {
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+    color: white;
+}
+
+.feature-icon-green {
+    background: var(--green);
+}
+
+.feature-icon-blue {
+    background: var(--blue);
+}
+
+.feature-icon-purple {
+    background: var(--purple);
+}
+
+/* Ховеры карточек по цвету иконки */
+.feature-card-green:hover {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0.08) 100%);
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.features .feature-card:nth-child(2):hover {
+    background: rgba(59, 130, 246, 0.16);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.features .feature-card:nth-child(3):hover {
+    background: rgba(139, 92, 246, 0.16);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-link {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.feature-link:hover {
+    color: var(--green-dark);
+}
+
+/* ============================================
+   ALL IN ONE SECTION
+   ============================================ */
+.all-in-one-card {
+    background: var(--bg-card);
+    padding: var(--spacing-2xl);
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+    box-shadow: var(--shadow-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.all-in-one-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.all-in-one-content p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xl);
+}
+
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.tag-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.tag-dot-green {
+    background: var(--green);
+}
+
+.tag-dot-blue {
+    background: var(--blue);
+}
+
+.tag-dot-purple {
+    background: var(--purple);
+}
+
+.tag-green {
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.tag-blue {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.tag-purple {
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.all-in-one-chart {
+    background: rgba(255, 255, 255, 0.02);
+    padding: var(--spacing-xl);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.chart-header {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.chart-bars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.chart-bar {
+    height: 12px;
+    border-radius: 6px;
+    transition: width var(--transition-slow) ease-out;
+}
+
+.chart-bar-green {
+    background: var(--green);
+}
+
+.chart-bar-blue {
+    background: var(--blue);
+}
+
+.chart-bar-purple {
+    background: var(--purple);
+}
+
+.chart-bar-orange {
+    background: var(--orange);
+}
+
+/* ============================================
+   AUTH PAGES
+   ============================================ */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: var(--spacing-xl) 0;
+}
+
+.auth-card {
+    background: var(--bg-card);
+    padding: var(--spacing-xl);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--border-color);
+}
+
+.auth-card h2 {
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+    color: var(--text-primary);
+}
+
+.auth-footer {
+    margin-top: var(--spacing-lg);
+    text-align: left;
+    color: var(--text-light);
+}
+
+.auth-footer a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
