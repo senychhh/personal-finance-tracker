@@ -1,0 +1,114 @@
+@use "./settings" as s;
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@include s.respond(lg) {
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .dashboard-sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100vh;
+        z-index: 200;
+        transition: left var(--transition-base);
+    }
+
+    .dashboard-sidebar.is-open {
+        left: 0;
+    }
+
+    .dashboard-topbar .burger-btn {
+        display: inline-flex;
+    }
+
+    .dashboard-main {
+        padding: var(--spacing-lg);
+    }
+
+    .stats-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-summary {
+        max-width: 100%;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .all-in-one-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include s.respond(md) {
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+
+    .nav {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .nav-center,
+    .nav-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    /* На мобильных тоже чуть выше */
+    .hero-scroll-section {
+        padding-top: calc(var(--spacing-xl) + 40px);
+    }
+
+    .scroll-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats-grid,
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-topbar .header-user {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .topbar-title h1 {
+        font-size: 1.25rem;
+    }
+
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-value {
+        font-size: 2.5rem;
+    }
+
+    .dashboard-main {
+        padding: var(--spacing-md);
+    }
+}

@@ -1,5 +1,4 @@
 // Работа с аутентификацией: сохранение токена, проверка авторизации
-
 const API_BASE_URL = '/api';
 
 // Сохраняем токен в localStorage
@@ -75,19 +74,22 @@ function updateNavigation(isAuth) {
     const loginBtn = document.getElementById('loginBtn');
     const registerBtn = document.getElementById('registerBtn');
     const dashboardLink = document.getElementById('dashboardLink');
-    const logoutBtn = document.getElementById('logoutBtn');
 
     // Скрываем/показываем кнопки входа и регистрации
     if (loginBtn) loginBtn.style.display = isAuth ? 'none' : 'inline-block';
     if (registerBtn) registerBtn.style.display = isAuth ? 'none' : 'inline-block';
     
-    // Показываем/скрываем кнопки панели управления и выхода
+    // Показываем/скрываем кнопку панели управления
     if (dashboardLink) dashboardLink.style.display = isAuth ? 'inline-block' : 'none';
-    if (logoutBtn) logoutBtn.style.display = isAuth ? 'inline-block' : 'none';
 }
 
 // Выход из системы
 function logout() {
+    // Разрешаем навигацию назад перед выходом
+    if (typeof window.allowBackNavigation === 'function') {
+        window.allowBackNavigation();
+    }
+    
     removeToken();
     window.location.href = '/';
 }
@@ -99,11 +101,14 @@ if (document.readyState === 'loading') {
     checkAuth();
 }
 
-// Обработчик кнопки выхода
+// Обработчик ссылки выхода в сайдбаре
 document.addEventListener('DOMContentLoaded', () => {
-    const logoutBtn = document.getElementById('logoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', logout);
+    const sidebarLogoutLink = document.getElementById('sidebarLogoutLink');
+    if (sidebarLogoutLink) {
+        sidebarLogoutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            logout();
+        });
     }
 });
 

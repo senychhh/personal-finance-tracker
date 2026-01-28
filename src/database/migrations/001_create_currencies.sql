@@ -26,5 +26,5 @@ INSERT INTO currencies (code, name, symbol) VALUES
     ('RUB', 'Russian Ruble', '₽'),
     ('GBP', 'British Pound', '£'),
     ('BYN', 'Belarusian Ruble', 'Br')
-ON CONFLICT (code) DO NOTHING; //
+ON CONFLICT (code) DO NOTHING; 
 

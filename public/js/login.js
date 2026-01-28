@@ -7,7 +7,7 @@ const errorMessage = document.getElementById('errorMessage');
 if (typeof initFormValidation === 'function') {
     document.addEventListener('DOMContentLoaded', () => {
         initFormValidation();
-    });
+    }); 
 }
 
 loginForm.addEventListener('submit', async (e) => {

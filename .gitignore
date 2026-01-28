@@ -30,11 +30,14 @@ Thumbs.db
 dist/
 build/
 
+# Compiled CSS (generated from SCSS)
+public/css/style.css
+
 
 tmp/
 temp/
 
 README.md
 SETUP.md
-
+API.md
 GIT_WORKFLOW.md
